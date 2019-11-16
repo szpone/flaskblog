@@ -1,7 +1,21 @@
-<html>
-    <body>
+{% extends "base.html" %}
 
-    <form>Elo, tu bedzie formularz</form>
+{% block content %}
 
-    </body>
-</html>
+    <form>
+
+        <div>
+            {{ form.title.label }}
+            {{ form.title }}
+        </div>
+
+        <div>
+            {{ form.content.label }}
+            {{ form.content }}
+        </div>
+
+        <div> {{ form.submit() }} </div>
+
+    </form>
+
+{% endblock %}

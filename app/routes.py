@@ -1,5 +1,6 @@
 from app import app
 from flask import render_template
+from app.forms import AddPost
 
 @app.route("/")
 def index():
@@ -8,4 +9,5 @@ def index():
 
 @app.route("/add-post")
 def add_post():
-    return render_template("add_post.html")
+    form = AddPost()
+    return render_template("add_post.html", form=form)
